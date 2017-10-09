@@ -14,7 +14,7 @@ public class FamilyAllowanceTest {
 
         Child firstchild = new FirstChild(LocalDate.of(2011, 4, 8), regularParent);
 
-        int actual = AllowanceCalculator.calculateAllowance(firstchild);
+        int actual = ChildAllowanceCalculator.calculateAllowance(firstchild);
 
         Assertions.assertThat(actual).isEqualTo(expected);
 
@@ -26,7 +26,7 @@ public class FamilyAllowanceTest {
 
         Child firstchild = new FirstChild(LocalDate.of(2005, 9, 6), regularParent);
 
-        int actual = AllowanceCalculator.calculateAllowance(firstchild);
+        int actual = ChildAllowanceCalculator.calculateAllowance(firstchild);
 
         Assertions.assertThat(actual).isEqualTo(expected);
 
@@ -38,7 +38,7 @@ public class FamilyAllowanceTest {
 
         Child firstchild = new FirstChild(LocalDate.of(2005, 9, 6), unemployedParent);
 
-        int actual = AllowanceCalculator.calculateAllowance(firstchild);
+        int actual = ChildAllowanceCalculator.calculateAllowance(firstchild);
 
         Assertions.assertThat(actual).isEqualTo(expected);
 

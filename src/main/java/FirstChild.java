@@ -7,10 +7,12 @@ public class FirstChild implements Child {
     private LocalDate birthdate;
     private Parent parent;
 
+    AgeAllowanceRule ageAllowance;
+
     public FirstChild(LocalDate birthdate, Parent parent) {
         this.birthdate = birthdate;
         this.parent = parent;
-    }
+        }
 
     @Override
     public int getAmountOfBaseAllowance() {
@@ -48,13 +50,7 @@ public class FirstChild implements Child {
             return 0;
         }
     }
-
-    @Override
-    public LocalDate getBirthdate() {
-        return birthdate;
-    }
-
-    public int getAge() {
+    private int getAge() {
         return Period.between(birthdate, LocalDate.now()).getYears();
     }
 }

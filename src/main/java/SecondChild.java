@@ -50,11 +50,6 @@ public class SecondChild implements Child {
         }
     }
 
-    @Override
-    public LocalDate getBirthdate() {
-        return birthdate;
-    }
-
     public int getAge() {
         return Period.between(birthdate, LocalDate.now()).getYears();
     }
