@@ -1,7 +1,7 @@
 public interface Family {
 
     //NAME SHOULD BE BETTER
-    public int getAmountOfKids();
+    public int getNumberOfKids();
 
     public void addKids(int amountOfBabies);
 }
